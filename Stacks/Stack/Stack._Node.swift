@@ -5,10 +5,10 @@ extension Stack {
     internal class _Node {
         
         @usableFromInline
-        internal var element: Element
+        internal let element: Element
         
         @usableFromInline
-        internal var next: _Node?
+        internal let next: _Node?
         
         @usableFromInline
         internal init(element: Element, next: _Node? = nil) {
