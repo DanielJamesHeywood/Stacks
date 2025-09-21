@@ -6,3 +6,11 @@ extension Stack: CustomStringConvertible {
         return "[\(map({ element in String(reflecting: element) }).joined(separator: ", "))]"
     }
 }
+
+extension Stack: CustomDebugStringConvertible {
+    
+    @inlinable
+    public var debugDescription: String {
+        return "Stack(\(self))"
+    }
+}
