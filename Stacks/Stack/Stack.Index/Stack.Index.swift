@@ -13,14 +13,14 @@ extension Stack {
         @usableFromInline
         internal let _version: _Version
         
-        @usableFromInline
+        @inlinable
         internal init(_startOf base: Stack) {
             _handle = base._head
             _offset = 0
             _version = base._version
         }
         
-        @usableFromInline
+        @inlinable
         internal init(_endOf base: Stack) {
             _handle = nil
             _offset = base._count

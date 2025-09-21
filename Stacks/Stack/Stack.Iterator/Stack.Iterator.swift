@@ -7,7 +7,7 @@ extension Stack {
         @usableFromInline
         internal var _handle: _Node?
         
-        @usableFromInline
+        @inlinable
         internal init(_base: Stack) {
             _handle = _base._head
         }
