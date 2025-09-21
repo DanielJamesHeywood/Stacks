@@ -11,6 +11,8 @@ extension Stack: Equatable where Element: Equatable {
             guard lhNode.element == rhNode.element else {
                 return false
             }
+            lhHandle = lhNode.next
+            rhHandle = rhNode.next
         }
         return true
     }
