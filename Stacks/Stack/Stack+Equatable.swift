@@ -6,7 +6,8 @@ extension Stack: Equatable where Element: Equatable {
         guard lhs._count == rhs._count else {
             return false
         }
-        var lhHandle = lhs._head, rhHandle = rhs._head
+        var lhHandle = lhs._head
+        var rhHandle = rhs._head
         while let lhNode = lhHandle, let rhNode = rhHandle, lhNode !== rhNode {
             guard lhNode.element == rhNode.element else {
                 return false
