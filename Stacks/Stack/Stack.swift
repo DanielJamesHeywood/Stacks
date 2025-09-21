@@ -6,4 +6,7 @@ public struct Stack<Element> {
     
     @usableFromInline
     internal var _count: Int
+    
+    @usableFromInline
+    internal var _version: _Version
 }
