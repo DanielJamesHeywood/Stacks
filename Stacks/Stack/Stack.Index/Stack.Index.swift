@@ -13,3 +13,16 @@ extension Stack {
         internal let _version: _Version
     }
 }
+
+extension Stack.Index {
+    
+    @inlinable
+    internal func _ensureValid(for base: Stack) {
+        precondition(_version === base._version)
+    }
+    
+    @inlinable
+    internal func _ensureValid(with other: Stack.Index) {
+        precondition(_version === other._version)
+    }
+}
