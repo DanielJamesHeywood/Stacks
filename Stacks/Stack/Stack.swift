@@ -1,2 +1,9 @@
 
-public struct Stack<Element> {}
+public struct Stack<Element> {
+    
+    @usableFromInline
+    internal var _head: _Node?
+    
+    @usableFromInline
+    internal var _count: Int
+}
