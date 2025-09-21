@@ -1,0 +1,2 @@
+
+extension Stack: @unchecked Sendable {}
