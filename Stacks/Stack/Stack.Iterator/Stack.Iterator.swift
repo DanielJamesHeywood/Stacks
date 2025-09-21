@@ -1,6 +1,7 @@
 
 extension Stack {
     
+    @frozen
     public struct Iterator {
         
         @usableFromInline

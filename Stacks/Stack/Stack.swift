@@ -1,4 +1,5 @@
 
+@frozen
 public struct Stack<Element> {
     
     @usableFromInline
