@@ -6,6 +6,9 @@ public struct Stack<Element> {
     internal var _head: _Node?
     
     @usableFromInline
+    internal unowned var _tail: _Node?
+    
+    @usableFromInline
     internal var _count: Int
     
     @usableFromInline
