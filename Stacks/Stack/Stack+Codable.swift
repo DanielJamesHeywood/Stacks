@@ -9,3 +9,16 @@ extension Stack: Encodable where Element: Encodable {
         }
     }
 }
+
+extension Stack: Decodable where Element: Decodable {
+    
+    @inlinable
+    public init(from decoder: any Decoder) throws {
+        var reversed = Stack()
+        var container = try decoder.unkeyedContainer()
+        while !container.isAtEnd {
+            reversed.prepend(try container.decode(Element.self))
+        }
+        self.init(reversing: reversed)
+    }
+}
