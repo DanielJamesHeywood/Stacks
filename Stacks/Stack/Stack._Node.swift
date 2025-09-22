@@ -8,7 +8,7 @@ extension Stack {
         internal let element: Element
         
         @usableFromInline
-        internal let next: _Node?
+        internal var next: _Node?
         
         @usableFromInline
         internal init(element: Element, next: _Node? = nil) {
