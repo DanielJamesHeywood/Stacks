@@ -10,4 +10,10 @@ public struct Stack<Element> {
     
     @usableFromInline
     internal var _version: _Version
+    
+    public init() {
+        _head = nil
+        _count = 0
+        _version = _Version()
+    }
 }
