@@ -17,3 +17,34 @@ public struct Stack<Element> {
         _version = _Version()
     }
 }
+
+extension Stack {
+    
+    @inlinable
+    public init<S: Sequence>(reversing sequence: S) where S.Element == Element {
+        self.init()
+        for element in sequence {
+            self.prepend(element)
+        }
+    }
+}
+
+extension Stack {
+    
+    @inlinable
+    public mutating func prepend(_ newElement: Element) {
+        _invalidateIndices()
+        _head = _Node(element: newElement, next: _head)
+        _count += 1
+    }
+}
+
+extension Stack {
+    
+    @inlinable
+    internal mutating func _invalidateIndices() {
+        if !isKnownUniquelyReferenced(&_version) {
+            _version = _Version()
+        }
+    }
+}
